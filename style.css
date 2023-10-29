@@ -175,13 +175,8 @@ img {
 @media (max-width: 768px) {
     .container {
         overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: auto;
         white-space: nowrap; /* Prevent line breaks */
         display: flex; /* Ensure child elements are in a row */
-    }
-    
-    .card {
-        width: 200px; /* Set the width of your cards */
-        height: 200px; /* Set the height of your cards */
-        margin-right: 10px; /* Add spacing between cards */
     }
 }
