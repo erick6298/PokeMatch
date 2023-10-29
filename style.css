@@ -178,9 +178,12 @@ img {
         overflow-y: auto;
         white-space: nowrap; /* Prevent line breaks */
         display: flex; /* Ensure child elements are in a row */
-        padding-left: 100px;
+        padding-left: 50px;
     }
     #game {
-        padding-left: 100px;
+        padding-left: 150px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: auto;
+        white-space: nowrap; /* Prevent line breaks */
     }
 }
