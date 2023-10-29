@@ -178,6 +178,6 @@ img {
         overflow-y: auto;
         white-space: nowrap; /* Prevent line breaks */
         display: flex; /* Ensure child elements are in a row */
-        padding-left: 10px;
+        padding-left: 100px;
     }
 }
