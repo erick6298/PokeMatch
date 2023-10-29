@@ -180,9 +180,6 @@ img {
         display: flex; /* Ensure child elements are in a row */
         padding-left: 100px;
     }
-    .card > .front, .card > .back { 
-        padding-left: 100px;
-}
     #game {
         padding-left: 100px;
     }
