@@ -1,0 +1,173 @@
+:root {
+    --background: #F21D1D;
+    --headline: #590505;
+    --copy: #BF1515;
+    --accent: #0D0D0D;
+    --accent-text: #F2F2F2;
+}
+body {
+    background-color: var(--accent-text);
+}
+@font-face {
+    font-family: pokemon;
+    src: url(pokemon.ttf);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: pokemon;
+    letter-spacing: 4px;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-template-rows: repeat(4, 160px);
+    grid-gap: 10px;
+}
+
+.card {
+    box-shadow: 0 3px 10px rgba(200,200,200,0.9);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: 21px; 
+}
+
+
+.card > .front, .card > .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.front {
+    background-image: url("/pokeball.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.rotated {
+    transform: rotateY(180deg);
+}
+
+button {
+    font-size:18px;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+button:hover {
+    background-color: var(--headline);
+    color: var(--accent-text);
+}
+
+.victory-message {
+    animation: flash 1s infinite;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    padding: 10px;
+    display: none; 
+    white-space: nowrap; 
+    text-align: center; 
+    border-radius: 10px; 
+    max-width: 100%; 
+}
+
+.match-message {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    padding: 10px;
+    display: none; 
+    white-space: nowrap; 
+    text-align: center; 
+    border-radius: 10px; 
+    max-width: 100%; 
+}
+
+.match-message p {
+    margin: 0; 
+    font-size: 18px; 
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out 2;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(5px, 0); }
+    40% { transform: translate(-5px, 0); }
+    60% { transform: translate(5px, 0); }
+    80% { transform: translate(-5px, 0); }
+    100% { transform: translate(5px, 0); }
+}
+
+.pulse {
+    animation: pulse 1s ease-in-out 1;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
