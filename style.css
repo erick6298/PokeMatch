@@ -181,7 +181,7 @@ img {
         padding-left: 50px;
     }
     #game {
-        padding-left: 150px;
+        padding-left: 250px;
         overflow-x: auto; /* Enable horizontal scrolling */
         overflow-y: auto;
         white-space: nowrap; /* Prevent line breaks */
