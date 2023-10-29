@@ -173,11 +173,15 @@ img {
   }
 
 @media (max-width: 768px) {
-.card {
-    width: 30%; /* Adjust the size for smaller screens */
-    height: 30%; /* Adjust the size for smaller screens */
-}
-#game {
-    grid-gap: 5px; /* Adjust grid gap for smaller screens */
+    .container {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent line breaks */
+        display: flex; /* Ensure child elements are in a row */
+    }
+    
+    .card {
+        width: 200px; /* Set the width of your cards */
+        height: 200px; /* Set the height of your cards */
+        margin-right: 10px; /* Add spacing between cards */
     }
 }
